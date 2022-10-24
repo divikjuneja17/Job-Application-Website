@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Job Application Form</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <!--this is a white main container which is centered with respect to body-->
+      <div class="box">
+        <!--this is a container which is centered to above container and includes all the content -->
+        <h1>
+          Job Application Form
+          <span class="small_title">(Web)</span>
+        </h1>
+
+        <form action="">
+          <div class="form_container">
+            <div class="form_items">
+              <label for="fName">First Name: </label>
+              <!--for attribute value in label is equal to input id attribute value so that both can be linked and when user clicks on label text, cursor automatically comes inside the input text box which is beneficial for disabled users-->
+              <input
+                type="text"
+                id="fName"
+                name="fName"
+                placeholder="Enter your first name..."
+              />
+            </div>
+
+            <div class="form_items">
+              <!--The name attribute is needed to reference the form data after the form is submitted (if you omit the name attribute, no data from the drop-down list will be submitted).
+                    The id attribute is needed to associate the input text box with a label.-->
+              <label for="lName">Last Name: </label>
+              <input
+                type="text"
+                id="lName"
+                name="lName"
+                placeholder="Enter your last name..."
+              />
+            </div>
+
+            <div class="form_items">
+              <!-- A radio group is defined by giving each of radio buttons in the group the same 'name'. Once a radio group is established, selecting any radio button in that group automatically deselects any currently-selected radio button in the same group.
+                    Link: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/radio -->
+
+              <legend>Select your Gender:</legend>
+              <div>
+                <input type="radio" id="male" name="gender" value="male" />
+                <label for="male">Male</label>
+              </div>
+              <div>
+                <input type="radio" id="female" name="gender" value="female" />
+                <label for="female">Female</label>
+              </div>
+            </div>
+
+            <div class="form_items">
+              <legend>How you got to know about this role?</legend>
+              <div>
+                <input
+                  type="checkbox"
+                  id="company_website"
+                  name="role_find"
+                  value="company_website"
+                />
+                <label for="company_website">Company Website</label>
+              </div>
+              <div>
+                <input
+                  type="checkbox"
+                  id="employee"
+                  name="role_find"
+                  value="employee"
+                />
+                <label for="employee">Employee referral</label>
+              </div>
+
+              <div>
+                <input
+                  type="checkbox"
+                  id="social_media"
+                  name="role_find"
+                  value="social_media"
+                />
+                <label for="employee"
+                  >Twitter, Instagram, Youtube or Linkedin</label
+                >
+              </div>
+            </div>
+
+            <div class="form_items">
+              <label for="email">Email: </label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Enter your email id..."
+              />
+            </div>
+
+            <div class="form_items">
+              <label for="job_role">Job Role: </label>
+              <select id="job_role" name="job_role">
+                <option value="">--Select Job Role--</option>
+                <!-- no value option-->
+                <option value="front_end">Front-End Development</option>
+                <option value="back_end">Back-End Development</option>
+                <option value="full_stack">Full-Stack Development</option>
+              </select>
+            </div>
+
+            <div class="textarea_control">
+              <label for="address">Address</label>
+              <textarea
+                id="address"
+                name="address"
+                rows="4"
+                cols="70"
+                placeholder="Enter your address..."
+              ></textarea>
+            </div>
+
+            <div class="form_items">
+              <label for="city">City: </label>
+              <input
+                type="text"
+                id="city"
+                name="city"
+                placeholder="Enter your city..."
+              />
+            </div>
+
+            <div class="form_items">
+              <label for="pincode">Pincode: </label>
+              <!--number type used because pincode should only be in number type-->
+              <input
+                type="number"
+                id="pincode"
+                name="pincode"
+                placeholder="Enter your pincode..."
+              />
+            </div>
+
+            <div class="form_items">
+              <label for="date">Date: </label>
+              <!--number type used because pincode should only be in number type-->
+              <input type="date" id="date" name="date" value="2022-10-14" />
+              <!--default value added using 'value' attribute-->
+            </div>
+
+            <div class="form_items">
+              <label for="upload">Upload your CV: </label>
+              <input type="file" id="upload" name="upload" />
+            </div>
+          </div>
+
+          <div class="button-container">
+            <button type="submit">Apply Now</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
