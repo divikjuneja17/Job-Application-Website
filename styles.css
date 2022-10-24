@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body{
+    background-color: #ccc;
+}
+
+.container{
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.box{
+    max-width: 600px; /*its max-width is lesser than its parent container so that it can be centered with respect to parent container. */
+    margin: 0 auto;
+    background-color: white;
+    margin-top: 2rem;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    box-shadow: 4px 3px 5px rgba(1, 1, 1, 0.1); 
+    /*
+    (0.1) - The alpha parameter is a number between 0.0 (fully transparent) and 1.0 (fully opaque).
+    box-shadow: h-offset v-offset blur spread color 
+    h-offset- Required. The horizontal offset of the shadow. A positive value puts the shadow on the right side of the box, a negative value puts the shadow on the left side of the box	
+    v-offset- Required. The vertical offset of the shadow. A positive value puts the shadow below the box, a negative value puts the shadow above the box	
+    blur- Optional. The blur radius. The higher the number, the more blurred the shadow will be	
+    spread-	Optional. The spread radius. A positive value increases the size of the shadow, a negative value decreases the size of the shadow	
+    color- Optional. The color of the shadow. The default value is the text color.  */
+}
+
+
+.small_title{
+    font-size: 1.2rem;
+}
+
+.form_container{
+    margin-top: 1rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.form_items{ 
+    /* flex is used in for ex: to align first name and its textbox vertically. That's why we have used flex-direction column. */
+    display: flex;
+    flex-direction: column;
+}
+
+label{
+    font-size: 15px;
+    margin-bottom: 5px;
+}
+
+input, select, textarea{
+    padding: 0.5rem 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 15px;
+}
+
+input:focus{  /*when we click on textbox, its outline color will be changed */
+    outline-color: red;
+}
+
+.button-container{
+    display: flex;
+    justify-content: flex-end; /*to align button horizontally to end */
+    margin-top: 20px;
+}
+
+button{
+    background-color: red;
+    border: transparent solid 2px;
+    padding: 0.5rem 0.5rem;
+    color: white;
+    border-radius: 8px;
+    transition: 0.3s ease-in;
+}
+
+button:hover{
+    background-color: #ccc;
+    border: 2px solid red;
+    transition: 0.3s ease-out;
+    color: black;
+    cursor: pointer;
+}
+
+.textarea_control{
+    grid-column: 1 / span 2;
+}
+
+.textarea_control textarea{
+    width: 100%;
+}
+
+@media (max-width: 460px){
+    .textarea_control{
+        grid-column: 1 / span 1;
+    }
+}
